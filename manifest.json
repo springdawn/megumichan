@@ -1,6 +1,6 @@
 {
     "name":"megumichan",
-    "version":"1.0",
+    "version":"1.0.1",
     "manifest_version":2,
 
     "description":"天使あるいは天才。JKLTで音が出ます。オプションでキャラ切り替え",

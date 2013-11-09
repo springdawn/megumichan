@@ -1,6 +1,7 @@
 (function(){
-    var extId = "ehndmepkhehhdjadnnkmfkhlflhgnpip";
-    var extId2 = "ejnpaohpolfcfdadnllccdjooklcngnd";
+    var extId = ["ehndmepkhehhdjadnnkmfkhlflhgnpip",
+                 "ejnpaohpolfcfdadnllccdjooklcngnd",
+                 "kfefjimmhcemkbmebcanaddmplfcciai"]
     var sounds = {
         megumichan: [
             "./sounds/megumichan/tappurino.mp3",
@@ -31,7 +32,7 @@
     chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
         try {
             var chara = chchara();
-            if(sender.id === extId || sender.id === extId2) {
+            if(extId.indexOf(sender.id) != -1) {
                 if(request.key_map) {
                     sendResponse(key_map);
                 } else if(key_map[request.key]) {
